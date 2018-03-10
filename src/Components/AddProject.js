@@ -9,12 +9,13 @@ class AddProject extends Component {
     }
   }
 
-  static defaultProps = {
+  static defaultProps = { //this props
     categories: ['Web Design', 'Web Development', 'Mobile Development']
   }
 
   handleSubmit(e){
     if(this.refs.title.value === ''){
+      console.log("Title is required")
       alert('Title is required');
     } else {
       this.setState({newProject:{
